@@ -1,0 +1,35 @@
+
+:root {
+    --whiteColor: #fff;
+    --mainColor: #E14D2A;
+}
+.azkarUl{
+    display: flex;
+    list-style: none;
+    background-color: #eaeaea;
+    width: fit-content;
+    padding: 0;
+}
+.activeContent{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    border: 3px solid var(--mainColor);
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 800;
+}
+.activeContent button{
+    padding: 10px;
+    width: 80%;
+    background: #E14D2A;
+    border: 0;
+    outline: none;
+    color: var(--whiteColor)
+}
+.monringText,
+.nightText{
+    border-bottom: 3px dotted var(--mainColor);
+    padding-bottom: 10px;
+}
