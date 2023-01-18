@@ -1,0 +1,54 @@
+.surahContent{
+    background: #f7f7f7;
+    padding: 20px;
+    display: flex;
+    justify-content: stretch;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Sukar', sans-serif;
+}
+.surahContent div {
+    width:33%;
+    margin-bottom: 20px;
+}
+.ayahCon{
+    font-family: 'Amiri Quran', sans-serif;
+}
+.pageFrom,
+.pageTo{
+    position: absolute;
+    top: 8%;
+    left: 27.5%
+}
+.pageTo{
+    left: 21%
+}
+.ayahNumber{
+    margin: 0 5px;
+    background: #f7f7f7;
+    border-radius: 50%;
+    color: #000;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #f00
+}
+.btns{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px 0;
+}
+.btns a{
+    text-decoration: none;
+    background: #f00;
+    width: 80px;
+    text-align: center;
+    padding: 4px 7px;
+    color: #fff;
+    border-radius: 6px;
+    font-family: 'Sukar', sans-serif;
+}

@@ -1,3 +1,7 @@
+.App{
+  width: 80%;
+  margin: auto
+}
 .mainTabs{
   display: flex;
   list-style: none;
@@ -17,12 +21,18 @@
   height: 30px;
   line-height: 25px;
   font-weight: bold;
+  text-decoration: none;
 }
 .activeTab{
   border-bottom: 2px solid #E14D2A;
   background-color: #fff;
   color: #E14D2A
 }
-.tab:last-of-type{
+.tab:last-of-type,
+.activeTab:last-of-type{
   border: 0;
+}
+.active{
+  width: 85%;
+  margin: 30px auto
 }
