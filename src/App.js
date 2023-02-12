@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Quran from './components/Quran/Quran';
 import Azkar from './components/Azkar/Azkar'
 import Navbar from './components/Navbar';
+import FilterSurah from './components/Quran/FilterSurah';
 function App() {
   return (
     <div className="App">

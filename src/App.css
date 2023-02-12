@@ -30,7 +30,7 @@
 }
 .tab:last-of-type,
 .activeTab:last-of-type{
-  border: 0;
+  border-left: 0;
 }
 .active{
   width: 85%;

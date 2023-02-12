@@ -1,9 +1,9 @@
 import React from 'react'
 
-const filterSurah = () => {
+const FilterSurah = () => {
   return (
     <div>filterSurah</div>
   )
 }
 
-export default filterSurah
+export default FilterSurah

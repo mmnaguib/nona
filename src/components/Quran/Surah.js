@@ -5,6 +5,15 @@ import '../../assets/style/surah.css';
 const Surah = () => {
   const [ayaht, setAyah] = useState([]);
   const [ayahCon, setAyahCon] = useState([]);
+  const [dataoffset, setdataoffset] = useState(0);
+  const [datalimit, setdatalimit] = useState(0);
+  const getDate = (x,y) => {
+    fetch('http://api.alquran.cloud/v1/surah/' + number +'?offset=' + x +'&limit=' + y)
+    .then((res) => res.json())
+    .then((data) => setAyah(data.data.ayahs));
+  }
+  
+
   let {number} = useParams();
   useEffect(()=>{
       fetch('https://api.alquran.cloud/v1/surah/' + number)
@@ -16,7 +25,12 @@ const Surah = () => {
       .then((res) => res.json())
       .then((data) => setAyahCon(data.data));
   },[number])
-  
+  const onChangeHandleroffset = e => {
+    setdataoffset(e.target.value);
+};
+  const onChangeHandlerLimit = e => {
+    setdatalimit(e.target.value);
+};
   return (
     <>
       <div className="surahContent">
@@ -28,7 +42,13 @@ const Surah = () => {
         <div>الصفحات : من &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; الي</div>
       </div>
       <div className='ayahs'>
-      <Link to={`/surah/${number}/1/3`}>عرض</Link>
+        
+       من<input type='number' onChange={onChangeHandleroffset} min={0}/>
+       الي  <input type='number'  onChange={onChangeHandlerLimit} max={ayahCon.numberOfAyahs}/>
+       <Link to={`/quran/surah/${number}?offset=${+dataoffset-1}&limit=${datalimit}`}
+      onClick={()=>getDate(dataoffset-1,datalimit-1)}>
+        عرض</Link>
+      <br />
           {ayaht.map((ayah,i) => 
           <span className='ayah' key={ayah.number}>
               <span className='ayahCon'>{ayah.text} </span><span className='ayahNumber'>{ayah.numberInSurah}</span>
